@@ -1,5 +1,9 @@
 package com.redbee.academy.clase3;
 
+import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class CombinacionDados {
 
     /**
@@ -15,8 +19,15 @@ public class CombinacionDados {
      * @return
      */
     public static Integer resolverCombinacionesPosiblesCon2Dados(Integer valor) {
-        // TODO: implementar
-        return null;
+        Integer cantComb = 0;
+
+        for (Integer i = 1; i < valor; i++){
+            for (Integer j = 1; j < valor; j++){
+                if ( i + j == valor)
+                    cantComb += 1;
+            }
+        }
+        return cantComb;
     }
 
     /**
@@ -26,7 +37,17 @@ public class CombinacionDados {
      * @return
      */
     public static Integer resolverCombinacionesPosiblesCon3Dados(Integer valor) {
-        // TODO: implementar
-        return null;
+        Integer cantComb = 0;
+        for (Integer i = 1; i < valor; i++){
+            for (Integer j = 1; j < valor; j++){
+                for (Integer k = 1; k < valor; k++){
+                    if (i + j + k == valor)
+                        cantComb += 1;
+                }
+            }
+        }
+        return cantComb;
     }
+
+
 }
